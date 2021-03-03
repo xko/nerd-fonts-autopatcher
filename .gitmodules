@@ -1,0 +1,5 @@
+[submodule "nerd-fonts"]
+	path = nerd-fonts
+	url = git@github.com:ryanoasis/nerd-fonts.git
+	shallow = true
+	update = rebase
