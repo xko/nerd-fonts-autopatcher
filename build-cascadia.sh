@@ -13,5 +13,10 @@ read
 pushd cascadia-code
 python3 ./build.py -W
 popd
+
+rm -r target/Cascadia
+mkdir -p target/Cascadia
+cp cascadia-code/build/ttf/*.ttf target/Cascadia
+
 echo
 echo "Note: .venv is still there.. can activate with: source .venv/bin/activate"
