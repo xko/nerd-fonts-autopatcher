@@ -5,11 +5,8 @@ source .venv/bin/activate
 python3 -m pip install -r cascadia-code/requirements.txt
 
 echo
-echo ".venv created"
-
+echo ".venv created. Building..."
 echo
-echo "Hit enter to build cascadia (Ctrl-C to break)"
-read
 pushd cascadia-code
 rm -r build
 python3 ./build.py -W
