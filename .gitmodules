@@ -3,3 +3,8 @@
 	url = git@github.com:ryanoasis/nerd-fonts.git
 	shallow = true
 	update = rebase
+[submodule "JetBrainsMono"]
+	path = JetBrainsMono
+	url = git@github.com:JetBrains/JetBrainsMono.git
+	shallow = true
+	update = rebase
