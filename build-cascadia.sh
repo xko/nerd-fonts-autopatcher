@@ -11,6 +11,7 @@ echo
 echo "Hit enter to build cascadia (Ctrl-C to break)"
 read
 pushd cascadia-code
+rm -r build
 python3 ./build.py -W
 popd
 
