@@ -8,3 +8,8 @@
 	url = git@github.com:JetBrains/JetBrainsMono.git
 	shallow = true
 	update = rebase
+[submodule "cascadia-code"]
+	path = cascadia-code
+	url = git@github.com:microsoft/cascadia-code.git
+	shallow = true
+	update = rebase
