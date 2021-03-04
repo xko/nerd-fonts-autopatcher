@@ -9,7 +9,7 @@ echo ".venv created. Building..."
 echo
 pushd cascadia-code
 rm -r build
-python3 ./build.py -W
+python3 ./build.py -W -S
 popd
 
 rm -r target/Cascadia
