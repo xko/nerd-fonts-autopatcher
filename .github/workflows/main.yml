@@ -34,7 +34,7 @@ jobs:
 
       - name: Patch 
         run: |
-          ./patch-cascadia.sh
+          #./patch-cascadia.sh
           ./patch-jetbrains.sh
       
       - name: Commit
