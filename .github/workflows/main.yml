@@ -43,8 +43,9 @@ jobs:
           mkdir -p fonts
           cp -r target/JetBrainsMono.patched fonts
           cp -r target/Cascadia.patched fonts
-          git add -u fonts/**
-          git add fonts/**
+          git config user.name "$GITHUB_REPOSITORY robot"
+          git config user.email "$GITHUB_WORKFLOW.$GITHUB_ACTOR@users.noreply.github.com"
+          git add -A fonts/**
           git commit -m "Fonts from $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           git push
 
