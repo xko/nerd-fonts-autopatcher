@@ -3,6 +3,9 @@ name: JetBrainsMono-version-poll
 on:
   schedule:
     - cron:  '0 10 * * *'
+  
+  workflow_dispatch:
+
 jobs:
   get-version:
     runs-on: ubuntu-latest
