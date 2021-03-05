@@ -1,4 +1,4 @@
-name: JetBrainsMono-version-poll
+name: JetBrainsMono-patch
 
 on:
   push:
