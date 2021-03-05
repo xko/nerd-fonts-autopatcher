@@ -1,15 +1,15 @@
 [submodule "nerd-fonts"]
 	path = nerd-fonts
-	url = git@github.com:ryanoasis/nerd-fonts.git
+	url = https://github.com/ryanoasis/nerd-fonts.git
 	shallow = true
 	update = rebase
 [submodule "JetBrainsMono"]
 	path = JetBrainsMono
-	url = git@github.com:JetBrains/JetBrainsMono.git
+	url = https://github.com/JetBrains/JetBrainsMono.git
 	shallow = true
 	update = rebase
 [submodule "cascadia-code"]
 	path = cascadia-code
-	url = git@github.com:microsoft/cascadia-code.git
+	url = https://github.com/microsoft/cascadia-code.git
 	shallow = true
 	update = rebase
