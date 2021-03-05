@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
 
-rm -r target/Cascadia-nerd
-mkdir -p target/Cascadia-nerd
+rm -r target/Cascadia.patched
+mkdir -p target/Cascadia.patched
 
-
-pushd nerd-fonts
-
-for f in ../cascadia-code/build/ttf/static/*.ttf
+for f in target/Cascadia/ttf/static/*.ttf
 do
     echo
     echo Patching $f 
     echo
-    ./font-patcher -w -c --careful -out ../target/Cascadia-nerd $f 
+    nerd-fonts/font-patcher -wcq --careful -out ../target/Cascadia-nerd $f 
 done
-
-popd

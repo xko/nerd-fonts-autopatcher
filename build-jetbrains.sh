@@ -2,4 +2,4 @@
 
 rm -r target/JetBrainsMono
 mkdir -p target/JetBrainsMono
-cp JetBrainsMono/fonts/ttf/*.ttf target/JetBrainsMono
+cp -r JetBrainsMono/fonts target/JetBrainsMono/

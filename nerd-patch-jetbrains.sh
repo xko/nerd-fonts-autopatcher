@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
 
-rm -r target/JetBrainsMono-nerd
-mkdir -p target/JetBrainsMono-nerd
+rm -r target/JetBrainsMono.patched
+mkdir -p target/JetBrainsMono.patched
 
 
-pushd nerd-fonts
 
-for f in ../JetBrainsMono/fonts/ttf/*.ttf
+for f in target/JetBrainsMono/fonts/ttf/*.ttf
 do
     echo
     echo Patching $f ..
     echo
-    ./font-patcher -w -c --careful -out ../target/JetBrainsMono-nerd $f 
+    nerd-fonts/font-patcher -wcq --careful -out target/JetBrainsMono.patched $f 
 done
-
-popd
