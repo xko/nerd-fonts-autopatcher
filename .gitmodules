@@ -3,13 +3,3 @@
 	url = https://github.com/ryanoasis/nerd-fonts.git
 	shallow = true
 	update = rebase
-[submodule "JetBrainsMono"]
-	path = JetBrainsMono
-	url = https://github.com/JetBrains/JetBrainsMono.git
-	shallow = true
-	update = rebase
-[submodule "cascadia-code"]
-	path = cascadia-code
-	url = https://github.com/microsoft/cascadia-code.git
-	shallow = true
-	update = rebase
