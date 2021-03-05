@@ -36,4 +36,18 @@ jobs:
         run: |
           ./patch-cascadia.sh
           ./patch-jetbrains.sh
+      
+      - name: Commit
+        run: |
+          rm -rf fonts
+          mkdir -p fonts
+          cp -r target/JetBrainsMono.patched fonts
+          cp -r target/Cascadia.patched fonts
+          git add -u fonts/**
+          git add fonts/**
+          git commit -m "Fonts from $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          git push
+
+
+
 
