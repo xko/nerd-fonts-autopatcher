@@ -6,7 +6,8 @@ mkdir -p target/Cascadia.patched
 for f in target/Cascadia/ttf/static/*.ttf
 do
     echo
-    echo Patching $f 
-    echo
-    nerd-fonts/font-patcher -wcq --careful -out target/Cascadia.patched $f 
+    echo "Patching $f .."
+    nerd-fonts/font-patcher -wcq --careful -out target/Cascadia.patched $f &>/dev/null
+    echo ".. done $f"
+
 done
