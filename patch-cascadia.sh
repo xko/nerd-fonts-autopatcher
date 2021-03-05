@@ -8,5 +8,5 @@ do
     echo
     echo Patching $f 
     echo
-    nerd-fonts/font-patcher -wcq --careful -out ../target/Cascadia-nerd $f 
+    nerd-fonts/font-patcher -wcq --careful -out ../target/Cascadia.patched $f 
 done
