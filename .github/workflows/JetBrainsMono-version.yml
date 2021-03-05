@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        # with:
-          # token: ${{ secrets.REPO_SCOPED_TOKEN }}
+        with:
+          token: ${{ secrets.REPO_PAT }}
       - name: Fetch release version
         run: |
           curl -Ls https://api.github.com/repos/JetBrains/JetBrainsMono/releases/latest | \
