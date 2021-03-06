@@ -1,4 +1,4 @@
-name: cascadia-code-patch
+name: cascadia-code
 
 on:
   schedule:

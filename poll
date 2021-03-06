@@ -4,13 +4,13 @@ set -x
 set -e
 
 REPO=$1
-mkdir -p target/$REPO
+mkdir -p tmp/$REPO
 
-pushd target/$REPO
+pushd tmp/$REPO
 
 curl -Lsf "https://api.github.com/repos/$REPO/releases/latest" > latest.json
 jq --exit-status -re ".tag_name" > .version < latest.json
 
 popd
 
-[ -s target/$REPO/.version ]
+[ -s tmp/$REPO/.version ]

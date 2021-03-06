@@ -8,7 +8,7 @@ REPO=$1
 ./poll.sh $REPO
 
 mkdir -p patched/$REPO
-cp target/$REPO/.version patched/$REPO/.version
+cp tmp/$REPO/.version patched/$REPO/.version
 
 [ -n "`git status --porcelain`" ] 
 
@@ -16,7 +16,7 @@ cp target/$REPO/.version patched/$REPO/.version
 
 rm -rf patched/$REPO
 mkdir -p patched/$REPO
-cp target/$REPO/.version patched/$REPO/.version
+cp tmp/$REPO/.version patched/$REPO/.version
 
 for f in bin/$REPO/*
 do

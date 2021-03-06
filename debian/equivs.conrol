@@ -1,7 +1,7 @@
 ### Built with equivs:
 # sudo apt install equivs                # to install 
 # equivs-control equivs.control          # to generate
-# equivs-build                           # to create .deb 
+# equivs-build equivs.control            # to create .deb 
 # sudo apt install ./<package-name>.deb  # to install dependencies 
 
 Section: misc
@@ -9,10 +9,10 @@ Priority: optional
 Homepage: https://github.com/xko/nerd-fonts-custom
 Standards-Version: 3.9.2
 
-Package: xko-nerd-fonts-custom-dependencies
+Package: xko-nerd-fonts-autopatcher
 Description: Dummy dependency provider for  https://github.com/xko/nerd-fonts-custom
-# Version: <enter version here; defaults to 1.0>
-# Maintainer: Your Name <yourname@example.com>
+Version: 1.0
+Maintainer: Niko Ugarov <xxkkoo@gmail.com>
 
 Depends: equivs,python3,python3-pip,python3-venv,fontforge,python3-fontforge,ttfautohint
 

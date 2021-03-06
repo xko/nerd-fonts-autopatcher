@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo apt-get -y install ./debian/xko-nerd-fonts-autopatcher_1.0_all.deb
+git submodule update --init --remote

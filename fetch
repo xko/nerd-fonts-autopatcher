@@ -4,7 +4,7 @@ set -x
 set -e
 
 REPO=$1
-TARGET=target/$REPO/release
+TARGET=tmp/$REPO/release
 rm -rf $TARGET
 mkdir -p $TARGET
 
