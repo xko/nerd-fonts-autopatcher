@@ -5,14 +5,14 @@ set -e
 
 REPO=$1
 
-./poll.sh $REPO
+./poll $REPO
 
 mkdir -p patched/$REPO
 cp tmp/$REPO/.version patched/$REPO/.version
 
 [ -n "`git status --porcelain`" ] 
 
-./fetch.sh $REPO
+./fetch $REPO
 
 rm -rf patched/$REPO
 mkdir -p patched/$REPO
