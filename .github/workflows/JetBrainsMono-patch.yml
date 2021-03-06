@@ -3,7 +3,9 @@ name: JetBrainsMono-patch
 on:
   push:
     paths:
-      - JetBrainsMono.version 
+      - JetBrainsMono.version
+  
+  workflow_dispatch:
 
 jobs:
   build:
