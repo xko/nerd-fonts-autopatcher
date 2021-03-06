@@ -14,3 +14,4 @@ git config user.email || git config user.email "$GITHUB_ACTOR-the-robot@users.no
 
 git add -A patched
 git commit  -m "$COMMIT_MSG"
+git push
