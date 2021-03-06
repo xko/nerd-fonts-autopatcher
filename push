@@ -12,6 +12,9 @@ git config user.email || git config user.email "$GITHUB_ACTOR-the-robot@users.no
     && COMMIT_MSG="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"\
     || COMMIT_MSG="patched"
 
+[ -f "tmp/.commit_msg" ]\
+    && COMMIT_MSG=$(printf "%q\n\n$COMMIT_MSG" "$(cat tmp/.commit_msg)")
+
 git add -A patched
 git commit  -m "$COMMIT_MSG"
 git pull -r

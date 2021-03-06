@@ -22,3 +22,6 @@ for f in bin/$REPO/*
 do
     [ -x $f ] && $f
 done
+
+echo -n "$REPO-" > tmp/.commit_msg
+cat tmp/$REPO/.version >> tmp/.commit_msg
