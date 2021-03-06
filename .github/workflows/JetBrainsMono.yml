@@ -3,7 +3,8 @@ name: JetBrainsMono-patch
 on:
   schedule:
     - cron:  '0 10 * * *'
-  
+  push:
+  pull_request:  
   workflow_dispatch:
 
 jobs:
@@ -11,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Init
+        run: ./init.sh
       - name: Poll & patch
         run: ./patch.sh JetBrains/JetBrainsMono
       - name: Commit & push
