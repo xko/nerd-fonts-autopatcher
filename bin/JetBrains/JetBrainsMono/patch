@@ -5,7 +5,7 @@ set -e
 
 REPO="JetBrains/JetBrainsMono"
 
-for f in target/$REPO/release/fonts/ttf/*.ttf
+for f in tmp/$REPO/release/fonts/ttf/*.ttf
 do
     nerd-fonts/font-patcher -wcq --careful -out patched/$REPO $f &>/dev/null
 done
