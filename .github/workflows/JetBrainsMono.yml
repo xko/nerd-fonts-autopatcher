@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Init
-        run: ./init.sh
+        run: ./init
       - name: Poll & patch
-        run: ./patch.sh JetBrains/JetBrainsMono
+        run: ./patch JetBrains/JetBrainsMono
       - name: Commit & push
-        run: ./push.sh 
+        run: ./push 

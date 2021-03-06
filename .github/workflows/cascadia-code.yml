@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Init
-        run: ./init.sh
+        run: ./init
       - name: Poll & patch
-        run: ./patch.sh microsoft/cascadia-code
+        run: ./patch microsoft/cascadia-code
       - name: Commit & push
-        run: ./push.sh 
+        run: ./push 
