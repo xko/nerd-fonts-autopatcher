@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Init
-        run: ./init
       - name: Poll & patch
         run: ./patch JetBrains/JetBrainsMono
       - name: Commit & push

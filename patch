@@ -12,6 +12,8 @@ cp tmp/$REPO/.version patched/$REPO/.version
 
 [ -n "`git status --porcelain`" ] 
 
+./init
+
 ./fetch $REPO
 
 rm -rf patched/$REPO
