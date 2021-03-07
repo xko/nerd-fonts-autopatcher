@@ -8,14 +8,16 @@ set -e
 git config user.name || git config user.name "robot"
 git config user.email || git config user.email "$GITHUB_ACTOR-the-robot@users.noreply.github.com"
 
-[ -n "$GITHUB_RUN_ID" ]\
-    && COMMIT_MSG="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"\
-    || COMMIT_MSG="patched"
-
 [ -f "tmp/.commit_msg" ]\
-    && COMMIT_MSG=$(printf "%q\n\n$COMMIT_MSG" "$(cat tmp/.commit_msg)")
+    && COMMIT_MSG=$(printf "%s" "$(< tmp/.commit_msg)")\
+    || COMMIT_MSG="Patched"
+
+[ -n "$GITHUB_RUN_ID" ]\
+    && COMMIT_MSG=$(printf "%s\n\n%s" "$COMMIT_MSG" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID")\
+    || :
+
 
 git add -A patched
 git commit  -m "$COMMIT_MSG"
-git pull -r
-git push
+#git pull -r
+#git push

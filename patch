@@ -22,8 +22,8 @@ cp tmp/$REPO/.version patched/$REPO/.version
 
 for f in bin/$REPO/*
 do
-    [ -x $f ] && $f
+    [ -x $f ] && echo $f
 done
 
-echo -n "$REPO-" > tmp/.commit_msg
-cat tmp/$REPO/.version >> tmp/.commit_msg
+echo -n "Patched $REPO " > tmp/.commit_msg
+printf "%s" $(< tmp/$REPO/.version) >> tmp/.commit_msg
