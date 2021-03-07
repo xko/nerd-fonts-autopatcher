@@ -10,7 +10,7 @@ REPO=$1
 mkdir -p patched/$REPO
 cp tmp/$REPO/.version patched/$REPO/.version
 
-[ -n "`git status --porcelain`" ] 
+[ -n "`git status --porcelain`" ] || exit 0
 
 ./init
 
