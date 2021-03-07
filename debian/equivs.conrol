@@ -6,11 +6,11 @@
 
 Section: misc
 Priority: optional
-Homepage: https://github.com/xko/nerd-fonts-custom
+Homepage: https://github.com/xko/nerd-fonts-autopatcher
 Standards-Version: 3.9.2
 
 Package: xko-nerd-fonts-autopatcher
-Description: Dummy dependency provider for  https://github.com/xko/nerd-fonts-custom
+Description: Dummy dependency provider for  https://github.com/xko/nerd-fonts-autopatcher
 Version: 1.0
 Maintainer: Niko Ugarov <xxkkoo@gmail.com>
 
