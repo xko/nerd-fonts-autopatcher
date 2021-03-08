@@ -12,7 +12,11 @@ pushd $TARGET
 
 curl -Lsf "https://api.github.com/repos/$REPO/releases/latest" > release.json
 
-jq -r '.assets | map(select(.content_type=="application/zip")) | .[].browser_download_url' \
+jq -r '.assets |
+       map(
+           select( .content_type | startswith("application/zip") ) //
+           select( .content_type | startswith("application/x-zip") )
+        ) | .[].browser_download_url' \
     < release.json \
     | wget -qi -
 
