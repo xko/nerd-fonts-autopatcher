@@ -14,7 +14,7 @@ Description: Dummy dependency provider for  https://github.com/xko/nerd-fonts-au
 Version: 1.0
 Maintainer: Niko Ugarov <xxkkoo@gmail.com>
 
-Depends: equivs,python3,python3-pip,python3-venv,fontforge,python3-fontforge,ttfautohint
+Depends: equivs,python3,python3-pip,python3-venv,fontforge,python3-fontforge,ttfautohint,jq
 
 # Pre-Depends: <comma-separated list of packages>
 # Recommends: <comma-separated list of packages>
