@@ -7,5 +7,5 @@ REPO="microsoft/cascadia-code"
 
 for f in tmp/$REPO/release/ttf/static/*.ttf
 do
-    nerd-fonts/font-patcher -wcq --careful -out patched/$REPO $f &>/dev/null
+    nerd-fonts/font-patcher -cq --careful --makegroups -out patched/$REPO $f &>/dev/null
 done
